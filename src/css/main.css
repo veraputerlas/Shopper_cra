@@ -222,7 +222,7 @@ a {
 
 .product_img {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   width: 623px;
   margin: 37px 0px 0px 85px; }

@@ -1,3 +1,8 @@
+import airpod_1 from "../../images/airpod_1.png"
+import airpod_2 from "../../images/airpod_2.png"
+import airpod_3 from "../../images/airpod_3.png"
+
+
 function Products(){
     return(
         <section className="products">
@@ -6,9 +11,9 @@ function Products(){
         </div>
         <div className="product">
           <div className="product_img">
-            <img src="./images/airpod_1.png" alt="airpod" />
-            <img className="airpod_2" src="./images/airpod_2.png" alt="airpod" />
-            <img className="airpod_3" src="./images/airpod_3.png" alt="airpod" />
+            <img src={airpod_1} alt="airpod" />
+            <img className="airpod_2" src={airpod_2} alt="airpod" />
+            <img className="airpod_3" src={airpod_3}alt="airpod" />
           </div>
           <div className="products_our">
             <h2 className="products_our_h2">Our Featured Products</h2>
