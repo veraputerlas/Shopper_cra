@@ -12,10 +12,6 @@ function App() {
       <Products/>
        <Sellers/>
        {/* <Footer/> */}
-       
-     
-
-
  </div>
   );
 }

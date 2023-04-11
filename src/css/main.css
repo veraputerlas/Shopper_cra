@@ -285,7 +285,7 @@ a {
 
 .sellers {
   height: 930px;
-  padding-top: 130px;
+  padding-top: 50px;
   display: flex;
   flex-direction: column; }
 
@@ -300,8 +300,9 @@ a {
   align-items: center;
   justify-content: center;
   margin-top: 55px; }
-
-.sellers__btn-wrapper button {
+  
+.sellers__btn-wrapper {
+  color: #030303;
   border-radius: 50%;
   font-size: 26px;
   line-height: 32px;
@@ -310,20 +311,53 @@ a {
   width: 177px;
   height: 91px; }
 
-button.btn__picks {
+  .sellers__btn-wrapper_active {    
+    border-radius: 50%;
+    font-size: 26px;
+    line-height: 32px;
+    cursor: pointer;
+    background: none;
+    width: 177px;
+    height: 91px; 
   background-color: #10b981;
-  color: #fff;
-  display: inline-block; }
+  color: #ECFEF4; }
+
+/*     
+.btn__oval {
+  color: #030303;
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 600; }
+
+.btn__oval_active {
+  font-size: 26px;
+  line-height: 32px;
+  font-weight: 600;
+  width: 177px;
+  height: 91px;
+  border-radius: 50%;
+  background-color: #10b981;
+  color: #ECFEF4; } */
 
 .btn__watches {
   font-weight: 600; }
 
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    gap: 20px;
+  }
+
 .cards {
+  width: 400px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
-  margin-top: 92px;
-  margin-bottom: 130px; }
+  gap: 29px;
+  position: relative; }
 
 .product__descr {
   position: relative;
@@ -336,35 +370,51 @@ button.btn__picks {
 .product__descr-rockerz {
   position: relative;
   height: 438px;
-  background-color: #ECFEF4;
   border-radius: 15px;
   width: 100%;
   padding: 0px 21px 21px 21px;
   margin-bottom: 29px; }
 
-.save {
+.green {
+  background-color: #ECFEF4;
+}
+.purp {
+  background-color: #E5D5FF;
+}
+.blue {
+  background-color: #C9F2FF;
+}
+
+.card__discount {
   position: absolute;
   right: 19px;
   top: 13px;
   width: 100px;
   height: 100px;
-  background-color: #10b981;
   border-radius: 50%;
   font-size: 18px;
   line-height: 22px;
   font-weight: 600;
+  background-color: #492bd2;
   color: #fff;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
 
-.save > p {
+  .card__discount_purp {
+    background-color: #845EC2;
+  }
+  .card__discount_green {
+    background-color: #10b981
+  }
+  .card__discount_blue {
+    background-color: #492bd2
+  }
+
+.card__discount > p {
   width: 60%;
   text-align: center; }
-
-.save__boat {
-  background-color: #845EC2; }
 
 .product__descr__img {
   width: 100%;
@@ -421,7 +471,7 @@ button.btn__picks {
 
 .product__descr-rockerz-324 {
   height: 438px;
-  background-color: #C9F2FF;
+  
   border-radius: 15px;
   width: 100%;
   padding: 0px 21px 21px 21px;
@@ -429,14 +479,14 @@ button.btn__picks {
 
 .product__descr-rockerz-323 {
   height: 438px;
-  background-color: #E5D5FF;
+  
   border-radius: 15px;
   width: 100%;
   padding: 0px 21px 21px 21px;
   margin-bottom: 29px; }
 
 .title {
-  margin-bottom: 120px; }
+  margin-bottom: 50px; }
 
 .airpod {
   margin-top: 120px; }

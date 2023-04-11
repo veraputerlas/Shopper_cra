@@ -19,7 +19,7 @@ function Header() {
           >
         </div>
         <SearcInput/>
-        <BtnAdded/>
+        <LoginBtn/>
       </section>
       <nav>
         <ul className="navigations">
@@ -56,8 +56,9 @@ function Header() {
     </header>
     )
 }
-const SearcInput = (1.19) => {
-  <div>
+const SearcInput = (props) => {
+  return (
+    <div>
     <label className="searc_input_label">
     <input className="placeholder" placeholder="Search items" />
     <button className="searc__input_btn">
@@ -65,10 +66,13 @@ const SearcInput = (1.19) => {
     </button>
   </label>
   </div>
+    )
+
 }
 
-const BtnAdded = () => {
-  <div className="login__btn">
+const LoginBtn = () => {
+  return (
+    <div className="login__btn">
   <button className="basket">
     <img src={icon} alt="icon" />
     <p className="add_text">0 items Added</p>
@@ -78,6 +82,7 @@ const BtnAdded = () => {
     <p className="login_text">Login or Sign Up</p>
   </button>
 </div>
+  )
 }
 
 export default Header
