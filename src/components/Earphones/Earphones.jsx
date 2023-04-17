@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import GET_headphons from "../../service/http/GET_headphons";
 
-import "./sellers.css";
+import "./earphones.css";
 import Card from "../Card/Card";
 import Modal from "../Modal/Modal";
+import Slider from "../Slider/Slider";
 
-function Sellers() {
+function Earphones() {
   const [curentTab, setCurentTab] = useState("Wiredless");
   const [showModal, setShowModal] = useState(false);
   const [headphonsList, setHeadphonesList] = useState([]);
@@ -29,40 +30,27 @@ function Sellers() {
   return (
     <section className="sellers">
       {showModal ? <Modal data={modalData} closeModal={closeModal} /> : null}
-      <h2 className="sellers__title sellers__title-margin-bt">Top Sellers</h2>
-      <div className="tab container">
+      <h2 className="sellers__title sellers__title-margin-bt">
+        Trending Earphones
+      </h2>
+      <div className="tab sellers_tab_container ">
         <div className="tab__btn-wrapper">
-          <button
-            onClick={() => setCurentTab("Wired")}
-            className={
-              curentTab === "Wired"
-                ? "button-oval button-oval_active"
-                : "button-oval"
-            }
-          >
-            Wired
-          </button>
-          <button
-            onClick={() => setCurentTab("Wiredless")}
-            className={
-              curentTab === "Wiredless"
-                ? "button-oval button-oval_active"
-                : "button-oval"
-            }
-          >
-            Wiredless
-          </button>
+          <TabButton
+            curentTab={curentTab}
+            setCurentTab={setCurentTab}
+            textContent={"Wired"}
+          />
+          <TabButton
+            curentTab={curentTab}
+            setCurentTab={setCurentTab}
+            textContent={"Wiredless"}
+          />
         </div>
         {curentTab === "Wired" ? (
           <Tabs list={headphonsList} openModal={openModal} />
         ) : null}
         {curentTab === "Wiredless" ? (
-          <div className="tab__card-wrapper">
-            <Card
-              openModal={openModal}
-              data={headphonsList[0] !== undefined ? headphonsList[0] : {}}
-            />
-          </div>
+          <Slider data={headphonsList} openModal={openModal} />
         ) : null}
       </div>
     </section>
@@ -78,5 +66,19 @@ const Tabs = ({ list, openModal }) => {
     </div>
   );
 };
+const TabButton = ({ curentTab, setCurentTab, textContent }) => {
+  return (
+    <button
+      onClick={() => setCurentTab(textContent)}
+      className={
+        curentTab === textContent
+          ? "button-oval button-oval_active"
+          : "button-oval"
+      }
+    >
+      {textContent}
+    </button>
+  );
+};
 
-export default Sellers;
+export default Earphones;

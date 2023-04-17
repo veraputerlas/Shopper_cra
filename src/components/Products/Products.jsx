@@ -1,38 +1,47 @@
-import airpod_1 from "../../images/airpod_1.png"
-import airpod_2 from "../../images/airpod_2.png"
-import airpod_3 from "../../images/airpod_3.png"
-
-
-function Products(){
-    return(
-        <section className="products">
-        <div className="products_text">
-          <p>Apple wireless Airpod</p>
+import { headphones__1, headphones__2, headphones__3 } from "./img";
+function Products() {
+  return (
+    <section className="products">
+      <div className="images ">
+        <h2 className="images__title">Apple wireless Airpod</h2>
+        <div className="images__container images__container_products">
+          <img
+            className="images__container_1"
+            src={headphones__1}
+            alt="headphones"
+          />
+          <img
+            className="images__container_2"
+            src={headphones__2}
+            alt="headphones"
+          />
+          <img
+            className="images__container_3"
+            src={headphones__3}
+            alt="headphones"
+          />
         </div>
-        <div className="product">
-          <div className="product_img">
-            <img src={airpod_1} alt="airpod" />
-            <img className="airpod_2" src={airpod_2} alt="airpod" />
-            <img className="airpod_3" src={airpod_3}alt="airpod" />
-          </div>
-          <div className="products_our">
-            <h2 className="products_our_h2">Our Featured Products</h2>
-            <p className="products_lorem">
-              Lorem ipsum is a placeholder text commonly used to demonstrate the
-              visual form of a product
-            </p>
-            <div className="btn_margine">
-              <button className="btn_add btn__add__products">Add to cart</button>
-              <button className="more">View more</button>
-            </div>
-          </div>
-        </div>
-        <div className="price">
-          <p className="price__text">Price:</p>
+        <div className="price price_products">
+          <p className="price__text">Price :</p>
           <p className="price__number">$45.99</p>
         </div>
-      
-      </section>
-    )
+      </div>
+
+      <div className="product-descr product-descr-normal">
+        <div className="product-descr__title">Our Featured Products</div>
+        <div className="product-descr__description">
+          Lorem ipsum is a placeholder text commonly used to demonstrate the
+          visual form of a product
+        </div>
+        <button className="button-card button-card_product-descr">
+          Add to cart
+        </button>
+        <button className="button-outline button-outline_product-descr">
+          View more
+        </button>
+      </div>
+    </section>
+  );
 }
-export default Products
+
+export default Products;
